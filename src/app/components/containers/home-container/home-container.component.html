@@ -1,0 +1,13 @@
+<section class="main">
+  <h2>{{ title }}</h2>
+  <div *ngFor="let par of parsedParas">
+    <p>
+      <ng-container *ngFor="let chunk of par">
+        <ng-container *ngIf="chunk.type === 'text'">{{ chunk.content }}</ng-container>
+        <ng-container *ngIf="chunk.type === 'strong'">
+          <strong>{{ chunk.content }}</strong>
+        </ng-container>
+      </ng-container>
+    </p>
+  </div>
+</section>

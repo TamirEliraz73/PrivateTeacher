@@ -1,0 +1,143 @@
+<section class="pricing">
+  <h1>המחירון שלנו</h1>
+
+  <!-- Individual Pricing Cards -->
+  <div class="pricing-cards">
+    <!-- Junior High School - 1 Hour -->
+    <div class="card">
+      <h2>חטיבה</h2>
+      <p class="price">₪{{ JHS }}<span>/שעה</span></p>
+      <button>תיאום שיעור</button>
+    </div>
+
+    <!-- High School - 1 Hour -->
+    <div class="card">
+      <h2>תיכון</h2>
+      <p class="price">₪{{ HIS }}<span>/שעה</span></p>
+      <button>תיאום שיעור</button>
+    </div>
+
+    <!-- University - 1 Hour -->
+    <div class="card">
+      <h2>תואר ראשון</h2>
+      <p class="price">₪{{ CUS }}<span>/שעה</span></p>
+      <button>תיאום שיעור</button>
+    </div>
+  </div>
+  <div class="pricing-cards">
+    <!-- Junior High School - 2 Hours -->
+    <div class="card">
+      <h2>חטיבה</h2>
+      <p class="old-price">במקום ₪{{ JHS * 2 }}</p>
+      <p class="price">₪{{calculate(JHS, H2,2)}}<span>/שעתיים</span></p>
+      <button>תיאום שיעור</button>
+    </div>
+
+
+    <!-- High School - 2 Hours -->
+    <div class="card">
+      <h2>תיכון</h2>
+      <p class="old-price">במקום ₪{{ HIS * 2 }}</p>
+      <p class="price">₪{{calculate(HIS, H2,2)}}<span>/שעתיים</span></p>
+      <button>תיאום שיעור</button>
+    </div>
+
+    <!-- University - 2 Hours -->
+    <div class="card">
+      <h2>תואר ראשון</h2>
+      <p class="old-price">במקום ₪{{ CUS * 2 }}</p>
+      <p class="price">₪{{calculate(CUS, H2,2)}}<span>/שעתיים</span></p>
+      <button>תיאום שיעור</button>
+    </div>
+  </div>
+
+  <!-- Monthly Packages -->
+  <h2>חבילות חודשיות</h2>
+  <div class="pricing-cards">
+    <!-- Junior High School - 4 Hours -->
+    <div class="card">
+      <h2>חטיבה</h2>
+      <p class="old-price">במקום ₪{{ JHS * 4 }}</p>
+      <p class="price">₪{{ calculate(JHS, H4,4) }}<span>/ל-4 שעות בחודש</span></p>
+      <button>תיאום חבילה</button>
+    </div>
+
+    <!-- High School - 4 Hours -->
+    <div class="card">
+      <h2>תיכון</h2>
+      <p class="old-price">במקום ₪{{ HIS * 4 }}</p>
+      <p class="price">₪{{ calculate(HIS, H4,4) }}<span>/ל-4 שעות בחודש</span></p>
+      <button>תיאום חבילה</button>
+    </div>
+
+    <!-- University - 4 Hours -->
+    <div class="card">
+      <h2>תואר ראשון</h2>
+      <p class="old-price">במקום ₪{{ CUS * 4 }}</p>
+      <p class="price">₪{{ calculate(CUS, H4,4) }}<span>/ל-4 שעות בחודש</span></p>
+      <button>תיאום חבילה</button>
+    </div>
+  </div>
+  <div class="pricing-cards">
+    <!-- Junior High School - 8 Hours -->
+    <div class="card">
+      <h2>חטיבה</h2>
+      <p class="old-price">במקום ₪{{ JHS * 8 }}</p>
+      <p class="price">₪{{ calculate(JHS, H8,8) }}<span>/ל-8 שעות בחודש</span></p>
+      <button>תיאום חבילה</button>
+    </div>
+
+    <!-- High School - 8 Hours -->
+    <div class="card">
+      <h2>תיכון</h2>
+      <p class="old-price">במקום ₪{{ HIS * 8 }}</p>
+      <p class="price">₪{{ calculate(HIS, H8,8) }}<span>/ל-8 שעות בחודש</span></p>
+      <button>תיאום חבילה</button>
+    </div>
+
+    <!-- University - 8 Hours -->
+    <div class="card">
+      <h2>תואר ראשון</h2>
+      <p class="old-price">במקום ₪{{ CUS * 8 }}</p>
+      <p class="price">₪{{ calculate(CUS, H8,8) }}<span>/ל-8 שעות בחודש</span></p>
+      <button>תיאום חבילה</button>
+    </div>
+  </div>
+
+  <!-- Discounts Section -->
+  <div class="location-notice">
+    <h2>הנחות מיוחדות</h2>
+    <div class="location-list">
+      <div class="location-item">
+        <strong>שיעור בזום / דיסקורד</strong>
+        <p>הנחה של 10%</p>
+      </div>
+      <div class="location-item">
+        <strong>לוחמי מילואים / בני משפחה</strong>
+        <p>הנחה של 15%</p>
+      </div>
+      <div class="location-item">
+        <strong>חבר מביא חבר / בני משפחה</strong>
+        <p>הנחה של 20%</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="location-notice">
+    <h2>תוספת מחיר לפי אזור מגורים</h2>
+    <div class="location-list">
+      <div class="location-item">
+        <strong>ללא תוספת</strong>
+        <p>שוהם, בית עריף, בית נחמיה, ברקת, טירת יהודה, גבעת כח</p>
+      </div>
+      <div class="location-item">
+        <strong>₪10+</strong>
+        <p>קריית אונו, יהוד, בני עטרות, גמזו, כפר דניאל</p>
+      </div>
+      <div class="location-item">
+        <strong>₪20+</strong>
+        <p>פתח תקווה, לוד, רמלה, מודיעין-מכבים-רעות והסביבה</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+$primary-color: #2c3e50;
+$secondary-color: #16a085;
+$light-color: #ecf0f1;
+$hover-color: rgba(22, 160, 133, 0.8);
+
+.navbar {
+  display: flex;
+  justify-content: flex-start; // ממקם את הכפתורים בצד ימין
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  align-items: center;
+  background: $primary-color;
+  padding: 15px 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+  .nav-button {
+    background: $secondary-color;
+    color: $light-color;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $hover-color;
+      transform: scale(1.05);
+    }
+
+    &:active {
+      background: darken($secondary-color, 10%);
+    }
+  }
+}

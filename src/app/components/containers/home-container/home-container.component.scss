@@ -1,0 +1,45 @@
+$primary-color: #2c3e50;
+$secondary-color: #16a085;
+$light-color: #ecf0f1;
+$background-color: #34495e;
+.main {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+  h2 {
+    color: $secondary-color;
+    border-bottom: 2px solid $secondary-color;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    line-height: 1.6;
+    margin-bottom: 5px;
+  }
+
+  strong {
+    color: #ff6600ff; /* לדוגמה, צבע כתום */
+  }
+  strong:hover{
+    color: #ff6600a0;
+  }
+
+  em {
+    font-style: italic;
+    color: #121212; /* צבע כחול לאיטלקי */
+  }
+
+  transition: all 0.3s ease;
+  &:hover {
+    //background: $hover-color;
+    transform: scale(1.05);
+  }
+  &:active {
+    background: darken($secondary-color, 10%);
+  }
+}

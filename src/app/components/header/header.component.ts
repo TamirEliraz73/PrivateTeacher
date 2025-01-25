@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
+import {routes} from '../../../assets/MyRoutes';
 
 @Component({
   selector: 'app-header',
@@ -14,4 +15,6 @@ export class HeaderComponent {
   nav(path: string) {
     this.router.navigate([path]).then().catch(console.error.bind(console));
   }
+
+  protected readonly routes = routes;
 }

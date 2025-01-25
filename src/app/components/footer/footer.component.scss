@@ -5,9 +5,9 @@ $light-color: #ecf0f1;
   background-color: $primary-color;
   color: $light-color;
   text-align: center;
-  padding: 20px 10px;
   margin-top: 40px;
   border-top: 3px solid $secondary-color;
+  padding: 20px 10px 40px;
 
   .container {
     max-width: 900px;
@@ -21,7 +21,7 @@ $light-color: #ecf0f1;
 
   .social-links {
     list-style: none;
-    padding: 0;
+    padding: 15px 0 0 0;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -44,12 +44,22 @@ $light-color: #ecf0f1;
         }
 
         svg {
-          fill: $light-color;
+          fill: purple;//$light-color;
           transition: fill 0.3s ease;
 
-          &:hover {
-            fill: $secondary-color;
+          #linkedin{
+            fill: lightblue;
           }
+          #github{
+            fill: white;
+          }
+          #discord{
+            fill: mediumpurple;
+          }
+
+          //&:hover {
+          //  fill: $secondary-color;
+          //}
         }
       }
     }

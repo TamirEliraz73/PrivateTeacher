@@ -25,9 +25,9 @@ function calculatePrice(basePrice: number, location: string, isZoom: boolean, fr
   styleUrl: './pricing-page.component.scss'
 })
 export class PricingPageComponent {
-  protected JHS: number = 70;
+  protected JHS: number = 90;
   protected HIS: number = 100;
-  protected CUS: number = 120;
+  protected CUS: number = 150;
   protected H2: number = 0.9;
   protected H4: number = 0.85;
   protected H8: number = 0.8;

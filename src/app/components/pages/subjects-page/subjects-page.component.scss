@@ -1,11 +1,12 @@
 $primary-color: #16a085;
-$secondary-color: rgba(255, 255, 255, 0.1);//#2c3e50;
-$background-light: #2c3e50;//#ecf0f1;
-$text-color: #ecf0f1;//#34495e;
+$secondary-color: rgba(255, 255, 255, 0.1); //#2c3e50;
+$background-light: #2c3e50; //#ecf0f1;
+$text-color: #ecf0f1; //#34495e;
 $card-shadow: rgba(0, 0, 0, 0.2);
-
-h1, h2 {
-  color: $text-color;//$secondary-color;
+h1, h2 ,h3{
+  color: $text-color; //$secondary-color;
+}
+h1, h2{
   margin-bottom: 20px;
   text-align: right;
 }
@@ -16,4 +17,47 @@ h1 {
 
 h2 {
   font-size: 1.8rem;
+  margin-top: 15px;
 }
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.group {
+  margin-bottom: 20px;
+  border-top: 2px dashed $primary-color;
+  &.first{
+    border-top: 0;
+  }
+}
+
+ul {
+  background-color: $secondary-color;
+  //list-style-type: none;
+  padding: 10px;
+  width: 75%;
+}
+
+li {
+  margin: 5px 0;
+  color: $text-color;
+}
+
+//.header {
+//  text-align: center;
+//  padding: 20px;
+//  background-color: #2c3e50;
+//  color: #ecf0f1;
+//}
+
+//.group p {
+//  background-color: #16a085;
+//  padding: 5px;
+//  margin: 5px 0;
+//  border-radius: 5px;
+//}
+//}

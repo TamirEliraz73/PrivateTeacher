@@ -1,49 +1,237 @@
 <div class="ms-5 mt-5">
-  <h1>מדעי המחשב</h1>
-  <h2>שפות תכנות</h2>
-  <div dir="ltr" class="flex flex-wrap place-content-center">
-    <app-subject-item [subject]="{name:'C',icon:'devicon-c-plain colored',color:'#2980b9',ltr:true}"/>
-    <app-subject-item [subject]="{name:'C++',icon:'devicon-cplusplus-plain colored',color:'#2980b9',ltr:true}"/>
-    <app-subject-item [subject]="{name:'C#',icon:'devicon-csharp-plain colored',color:'#2980b9',ltr:true}"/>
-    <app-subject-item [subject]="{name:'Python',icon:'devicon-python-plain colored',color:'#00ffff',ltr:true}"/>
-    <app-subject-item [subject]="{name:'Java',icon:'devicon-java-plain colored',color:'#16a085', ltr:true}"/>
-    <app-subject-item [subject]="{name:'Kotlin',icon:'devicon-kotlin-plain colored',color:'#16a085', ltr:true}"/>
+  <div class="flex flex-wrap">
+    <h1 class="mx-2" [ngStyle]="{'color':!isCS?'red':'green'}">
+      <button (click)="cs()">מדעי המחשב</button>
+    </h1>
+    <h1 class="mx-2" [ngStyle]="{'color':!isMA?'red':'green'}">
+      <button (click)="ma()">מתמטיקה</button>
+    </h1>
+    <h1 class="mx-2" [ngStyle]="{'color':!isFY?'red':'green'}">
+      <button (click)="fy()">פיזיקה</button>
+    </h1>
+    <h1 class="mx-2" [ngStyle]="{'color':!isEN?'red':'green'}">
+      <button (click)="en()">אנגלית</button>
+    </h1>
   </div>
-  <h2>שפות תלויות מערכת הפעלה</h2>
-  <div dir="ltr" class="flex flex-wrap place-content-center">
-    <app-subject-item [subject]="{name:'Android',icon:'devicon-android-plain colored',color:'#16a085', ltr:true}"/>
-    <app-subject-item [subject]="{name:'Bash',icon:'devicon-bash-plain colored',color:'#2980b9',ltr:true}"/>
-    <app-subject-item [subject]="{name:'Linux',icon:'devicon-linux-plain colored',color:'#2980b9',ltr:true}"/>
-  </div>
-  <h2>תכנות אינטרנט</h2>
-  <div dir="ltr" class="flex flex-wrap place-content-center">
-    <app-subject-item [subject]="{name:'HTML',icon:'devicon-html5-plain colored',color:'#00ffff',ltr:true}"/>
-    <app-subject-item [subject]="{name:'CSS',icon:'devicon-css3-plain colored',color:'#00ffff',ltr:true}"/>
-    <app-subject-item
-      [subject]="{name:'Java Script',icon:'devicon-javascript-plain colored',color:'#00ffff',ltr:true}"/>
-    <app-subject-item
-      [subject]="{name:'Type Script',icon:'devicon-typescript-plain colored',color:'#00ffff',ltr:true}"/>
-    <app-subject-item
-      [subject]="{name:'Php',icon:'devicon-php-plain colored',color:'#00ffff',ltr:true}"/>
-    <app-subject-item
-      [subject]="{name:'Bootstrap',icon:'devicon-bootstrap-plain colored',color:'#00ffff',ltr:true}"/>
-    <app-subject-item
-      [subject]="{name:'Tailwind CSS',icon:'devicon-tailwindcss-plain colored',color:'#00ffff',ltr:true}"/>
-    <app-subject-item [subject]="{name:'Angular',icon:'devicon-angular-plain colored',color:'#00ffff',ltr:true}"/>
-    <app-subject-item [subject]="{name:'React',icon:'devicon-react-plain colored',color:'#00ffff',ltr:true}"/>
-    <app-subject-item [subject]="{name:'Vue',icon:'devicon-vuejs-plain colored',color:'#00ffff',ltr:true}"/>
-  </div>
-  <h2>מאגרי מידע</h2>
-  <div dir="ltr" class="flex flex-wrap place-content-center">
-    <app-subject-item [subject]="{name:'SQLite',icon:'devicon-sqlite-plain colored',color:'#00ffff',ltr:true}"/>
-    <app-subject-item [subject]="{name:'MySQL',icon:'devicon-mysql-plain colored',color:'#00ffff',ltr:true}"/>
-    <app-subject-item [subject]="{name:'MongoDB',icon:'devicon-mongodb-plain colored',color:'#00ffff',ltr:true}"/>
-    <app-subject-item [subject]="{name:'JSON',icon:'devicon-json-plain colored',color:'#00ffff',ltr:true}"/>
-  </div>
+  <div [ngClass]="{'hidden':!isCS}"><!--collapse invisible-->
+    <h2>שפות תכנות</h2>
+    <div dir="ltr" class="flex flex-wrap place-content-center">
+      <app-subject-item [subject]="{name:'C',icon:'devicon-c-plain colored',color:'#2980b9',ltr:true}"/>
+      <app-subject-item [subject]="{name:'C++',icon:'devicon-cplusplus-plain colored',color:'#2980b9',ltr:true}"/>
+      <app-subject-item [subject]="{name:'C#',icon:'devicon-csharp-plain colored',color:'#2980b9',ltr:true}"/>
+      <app-subject-item [subject]="{name:'Python',icon:'devicon-python-plain colored',color:'#00ffff',ltr:true}"/>
+      <app-subject-item [subject]="{name:'Java',icon:'devicon-java-plain colored',color:'#16a085', ltr:true}"/>
+      <app-subject-item [subject]="{name:'Kotlin',icon:'devicon-kotlin-plain colored',color:'#16a085', ltr:true}"/>
+    </div>
+    <h2>שפות תלויות מערכת הפעלה</h2>
+    <div dir="ltr" class="flex flex-wrap place-content-center">
+      <app-subject-item [subject]="{name:'Android',icon:'devicon-android-plain colored',color:'#16a085', ltr:true}"/>
+      <app-subject-item [subject]="{name:'Bash',icon:'devicon-bash-plain colored',color:'#2980b9',ltr:true}"/>
+      <app-subject-item [subject]="{name:'Linux',icon:'devicon-linux-plain colored',color:'#2980b9',ltr:true}"/>
+    </div>
+    <h2>תכנות אינטרנט</h2>
+    <div dir="ltr" class="flex flex-wrap place-content-center">
+      <app-subject-item [subject]="{name:'HTML',icon:'devicon-html5-plain colored',color:'#00ffff',ltr:true}"/>
+      <app-subject-item [subject]="{name:'CSS',icon:'devicon-css3-plain colored',color:'#00ffff',ltr:true}"/>
+      <app-subject-item
+        [subject]="{name:'Java Script',icon:'devicon-javascript-plain colored',color:'#00ffff',ltr:true}"/>
+      <app-subject-item
+        [subject]="{name:'Type Script',icon:'devicon-typescript-plain colored',color:'#00ffff',ltr:true}"/>
+      <app-subject-item
+        [subject]="{name:'Php',icon:'devicon-php-plain colored',color:'#00ffff',ltr:true}"/>
+      <app-subject-item
+        [subject]="{name:'Bootstrap',icon:'devicon-bootstrap-plain colored',color:'#00ffff',ltr:true}"/>
+      <app-subject-item
+        [subject]="{name:'Tailwind CSS',icon:'devicon-tailwindcss-plain colored',color:'#00ffff',ltr:true}"/>
+      <app-subject-item [subject]="{name:'Angular',icon:'devicon-angular-plain colored',color:'#00ffff',ltr:true}"/>
+      <app-subject-item [subject]="{name:'React',icon:'devicon-react-plain colored',color:'#00ffff',ltr:true}"/>
+      <app-subject-item [subject]="{name:'Vue',icon:'devicon-vuejs-plain colored',color:'#00ffff',ltr:true}"/>
+    </div>
+    <h2>מאגרי מידע</h2>
+    <div dir="ltr" class="flex flex-wrap place-content-center">
+      <app-subject-item [subject]="{name:'SQLite',icon:'devicon-sqlite-plain colored',color:'#00ffff',ltr:true}"/>
+      <app-subject-item [subject]="{name:'MySQL',icon:'devicon-mysql-plain colored',color:'#00ffff',ltr:true}"/>
+      <app-subject-item [subject]="{name:'MongoDB',icon:'devicon-mongodb-plain colored',color:'#00ffff',ltr:true}"/>
+      <app-subject-item [subject]="{name:'JSON',icon:'devicon-json-plain colored',color:'#00ffff',ltr:true}"/>
+    </div>
 
-  <h2>משחקים</h2>
-  <div dir="ltr" class="flex flex-wrap place-content-center">
-    <app-subject-item [subject]="{name:'LibGDX',icon:'devicon-libgdx-plain colored',color:'#00ffff',ltr:true}"/>
-    <app-subject-item [subject]="{name:'Pygame',icon:'devicon-pygame-plain colored',color:'#00ffff',ltr:true}"/>
+    <h2>משחקים</h2>
+    <div dir="ltr" class="flex flex-wrap place-content-center">
+      <app-subject-item [subject]="{name:'LibGDX',icon:'devicon-libgdx-plain colored',color:'#00ffff',ltr:true}"/>
+      <app-subject-item [subject]="{name:'Pygame',icon:'devicon-pygame-plain colored',color:'#00ffff',ltr:true}"/>
+    </div>
+  </div>
+  <div [ngClass]="{'hidden':!isMA}"><!--collapse invisible-->
+    <div class="content">
+      <div class="group first">
+        <h2>אלגברה</h2>
+        <h3>הצגת מספרים מדעיים</h3>
+        <ul>
+          <li>הצגה של מספרים בצורה מדעית: חישוב של חזקות 10 ומציאת מעריכים</li>
+        </ul>
+        <h3>חוקי חזקות ושורשים</h3>
+        <ul>
+          <li>חוקים של חזקות: חזקות של מספרים, חוקים של חזקות עם מספרים שליליים ואפס</li>
+          <li>חישוב שורשים של מספרים ושימושים בחוקי השורשים</li>
+        </ul>
+        <h3>פירוק לגורמים</h3>
+        <ul>
+          <li>פירוק בגורמים ראשוניים: איך למצוא את הגורמים הראשוניים של מספרים</li>
+          <li>חישוב מספר הגורמים של מספרים (חוקי חישוב)</li>
+          <li>חישוב חזקות של מספרים</li>
+        </ul>
+        <h3>שדות מספרים ופעולות אריתמטיות</h3>
+        <ul>
+          <li>הגדרה של שדה מספרים (מספרים טבעיים, שלמים, רציונליים, ממשיים)</li>
+          <li>פעולות אריתמטיות בסיסיות (חיבור, חיסור, כפל, חילוק)</li>
+          <li>סדר פעולות חשבון: סדר פעולות בחשבון, חוקים של חיבור וכפל</li>
+        </ul>
+        <h3>משוואות לינאריות</h3>
+        <ul>
+          <li>פתרון משוואות לינאריות</li>
+          <li>שימוש במשוואות לינאריות לפתרון בעיות</li>
+          <li>פתרון מערכת משוואות לינאריות בעזרת חישובים אלגבריים</li>
+        </ul>
+        <h3>משוואות ריבועיות</h3>
+        <ul>
+          <li>פתרון משוואות ריבועיות בעזרת נוסחאות חישוב שונות (כמו נוסחת השורשים)</li>
+          <li>פתרון בעיות עם משוואות ריבועיות (כמו בעיות של תנועה, קפיצה ועוד)</li>
+        </ul>
+        <h3>סדרות חשבוניות וגיאומטריות</h3>
+        <ul>
+          <li>סדרה אריתמטית: הבנת הסדרה, חישוב הסכום שלה, כללים לחישוב איברי הסדרה</li>
+          <li>סדרה גיאומטרית: הבנת הסדרה, חישוב הסכום שלה, כללים לחישוב איברי הסדרה</li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <h2>גיאומטריה אנליטית</h2>
+        <h3>גיאומטריה של משולשים</h3>
+        <ul>
+          <li>המרחקים בין הנקודות במצולעים</li>
+          <li>משפטי תכונות בגיאומטריה של משולשים (כמו משפט פיתגורס)</li>
+        </ul>
+        <h3>גיאומטריה אנליטית של קטעים</h3>
+        <ul>
+          <li>חישוב אמצע קטע</li>
+          <li>חלוקת קטע ביחס נתון</li>
+          <li>חישוב המרחק בין שתי נקודות במישור</li>
+        </ul>
+        <h3>גיאומטריה אנליטית של הישר</h3>
+        <ul>
+          <li>הגדרה כמקום גיאומטרי</li>
+          <li>שיפוע הישר</li>
+          <li>משוואת הישר במישור</li>
+        </ul>
+        <h3>גיאומטריה אנליטית של מעגל</h3>
+        <ul>
+          <li>הגדרה של מעגל, רדיוס ומרכז המעגל</li>
+          <li>יחס בין נקודות שונות במעגל</li>
+        </ul>
+        <h3>גיאומטריה אנליטית של פרבולה</h3>
+        <ul>
+          <li>הגדרה של פרבולה</li>
+          <li>קשרים בין פרבולות ומעגלים</li>
+        </ul>
+        <h3>תכונות גיאומטריות</h3>
+        <ul>
+          <li>טרפזים</li>
+          <li>מרובעים שונים</li>
+          <li>מעגלים וצורות גיאומטריות אחרות</li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <h2>טריגונומטריה</h2>
+        <h3>הפונקציות הטריגונומטריות</h3>
+        <ul>
+          <li>סינוס, קוסינוס, טנגנס, קוטנגנס</li>
+          <li>המשמעות הגיאומטרית של פונקציות אלו</li>
+        </ul>
+        <h3>חוקי הסינוסים והקוסינוסים</h3>
+        <ul>
+          <li>חוק הסינוסים</li>
+          <li>חוק הקוסינוסים</li>
+        </ul>
+        <h3>משוואות טריגונומטריות</h3>
+        <ul>
+          <li>פתרון משוואות בעזרת נוסחאות טריגונומטריות</li>
+        </ul>
+        <h3>חוקי זוויות</h3>
+        <ul>
+          <li>חיבור, חיסור, כפל וחלוקה של זוויות</li>
+        </ul>
+        <h3>הפונקציות ההפוכות של סינוס, קוסינוס וטנגנס</h3>
+        <ul>
+          <li>המרת זוויות בין יחידות (רדיאנים ומעלות)</li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <h2>חדו"א (חשבון דיפרנציאלי ואינטגרלי)</h2>
+        <h3>נגזרות פונקציות</h3>
+        <ul>
+          <li>חוקי הגזירה</li>
+          <li>נגזרות של פונקציות חזקות, רציונליות, טריגונומטריות</li>
+        </ul>
+        <h3>מקסימום ומינימום</h3>
+        <ul>
+          <li>חיפוש מקסימום ומינימום בעזרת נגזרות</li>
+          <li>יישומים של קיצון בעיות כלכלה, אופטימיזציה</li>
+        </ul>
+        <h3>אינטגרלים</h3>
+        <ul>
+          <li>חישוב שטח תחת עקומות בעזרת אינטגרלים</li>
+          <li>המשמעות הפיזיקלית של אינטגרלים: תנועה, כוח, עבודה</li>
+        </ul>
+        <h3>הפונקציה ההפוכה של נגזרת</h3>
+        <ul>
+          <li>חישוב אינטגרלים בעזרת כללים</li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <h2>הסתברות וסטטיסטיקה</h2>
+        <h3>מרחב מדגם והסתברות</h3>
+        <ul>
+          <li>הגדרת מרחב מדגם</li>
+          <li>חישוב הסתברות בסיסית</li>
+        </ul>
+        <h3>הסתברות מותנה</h3>
+        <ul>
+          <li>חישוב הסתברות מותנה</li>
+          <li>פתרון בעיות הסתברות מותנה</li>
+        </ul>
+        <h3>חוקי חיבור והפסקות</h3>
+        <ul>
+          <li>חוק חיבור הסתברויות</li>
+          <li>חוק הפסקת הסתברויות</li>
+        </ul>
+        <h3>חוק בייס</h3>
+        <ul>
+          <li>יישום הסתברויות לפי חוק בייס</li>
+        </ul>
+      </div>
+      <hr class="dashed-line">
+      <div class="group">
+        <h2>מספרים מרוכבים</h2>
+        <h3>הגדרה ופעולות עם מספרים מרוכבים</h3>
+        <ul>
+          <li>הוספה, חיסור, כפל, חילוק של מספרים מרוכבים</li>
+        </ul>
+        <h3>הצגת מספרים מרוכבים במישור הגאוסי</h3>
+        <ul>
+          <li>הצגת מספרים מרוכבים במישור הדמיוני</li>
+        </ul>
+        <h3>חישוב שורשים של מספרים מרוכבים</h3>
+        <ul>
+          <li>החישוב של שורשים של מספרים מרוכבים בעזרת נוסחאות</li>
+        </ul>
+        <h3>חוק דה-מואבר</h3>
+        <ul>
+          <li>שימוש בחוק דה-מואבר למציאת חזקות ושורשים של מספרים מרוכבים</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>

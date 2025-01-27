@@ -1,0 +1,17 @@
+<div class="card" [ngStyle]="{'background-color': subject.color}">
+  <div class="flex" [ngClass]="{'ltr': subject.ltr, 'rtl': !subject.ltr}">
+    <div class="icon">
+      <i [class]="subject.icon"></i>
+    </div>
+    <div class="title">{{ subject.name }}</div>
+  </div>
+</div>
+
+  <!--<div *ngFor="let subject of subjects" class="card" [ngStyle]="{ 'background-color': subject.color }">-->
+  <!--  <div class="flex">-->
+  <!--    <div class="icon">-->
+  <!--      <i [class]="subject.icon"></i>-->
+  <!--    </div>-->
+  <!--    <div class="title">{{ subject.name }}</div>-->
+  <!--  </div>-->
+  <!--</div>-->

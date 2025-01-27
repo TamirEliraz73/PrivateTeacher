@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
-import {routes} from '../../../assets/MyRoutes';
+import {MyRoutes, routes} from '../../../assets/MyRoutes';
 
 @Component({
   selector: 'app-header',
@@ -10,11 +10,23 @@ import {routes} from '../../../assets/MyRoutes';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  constructor(private router: Router) {}
+  protected isMenuOpen: boolean = false;
+  protected readonly routes: MyRoutes[] = routes;
 
-  nav(path: string) {
+  public constructor(private router: Router) {}
+
+  protected nav(path: string): void {
     this.router.navigate([path]).then().catch(console.error.bind(console));
   }
 
-  protected readonly routes = routes;
+
+  protected toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+    console.log(this.isMenuOpen);
+  }
+
+  protected changeLanguage(code: string): void {
+    document.dir = code === 'he' ? 'rtl' : 'ltr';
+    this.toggleMenu();
+  }
 }

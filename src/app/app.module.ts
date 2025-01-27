@@ -12,6 +12,8 @@ import { HomeContainerComponent } from './components/containers/home-container/h
 import { ContactPageComponent } from './components/pages/contact-us-page/contact-page.component';
 import { PricingPageComponent } from './components/pages/pricing-page/pricing-page.component';
 import { TermsAndConditionsPageComponent } from './components/pages/terms-and-conditions-page/terms-and-conditions-page.component';
+import { SubjectItemComponent } from './components/containers/subject-item/subject-item.component';
+import { SubjectsPageComponent } from './components/pages/subjects-page/subjects-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { TermsAndConditionsPageComponent } from './components/pages/terms-and-co
     HomeContainerComponent,
     ContactPageComponent,
     PricingPageComponent,
-    TermsAndConditionsPageComponent
+    TermsAndConditionsPageComponent,
+    SubjectItemComponent,
+    SubjectsPageComponent
   ],
     imports: [
         BrowserModule,

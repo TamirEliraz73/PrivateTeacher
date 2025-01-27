@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class="language">
-    <button (click)="nav('ssss')">
+    <button (click)="toggleMenu()">
       <div class="globe-icon">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -29,3 +29,46 @@
     </button>
   </div>
 </header>
+<div class="side-menu" [ngClass]="{'open': isMenuOpen}">
+  <button class="close-btn" (click)="toggleMenu()">✖</button>
+  <ul>
+    <li> <button class="btn" (click)="changeLanguage('he')">
+      <div class="flex">
+      עברית
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480"
+      width="20"
+      >
+        <rect width="640" height="480" fill="white" />
+        <rect y="80" width="640" height="80" fill="#0038b8" />
+        <rect y="320" width="640" height="80" fill="#0038b8" />
+        <polygon points="320,200 295,250 345,250" fill="#0038b8" />
+        <polygon points="320,280 295,230 345,230" fill="#0038b8" />
+        <line x1="310" y1="235" x2="330" y2="235" stroke="#0038b8" stroke-width="10" />
+        <line x1="310" y1="245" x2="330" y2="245" stroke="#0038b8" stroke-width="10" />
+      </svg>
+      </div>
+    </button></li>
+    <li><button class="btn" (click)="changeLanguage('en')">
+      <div class="flex">
+        English
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"
+             width="20">
+          <rect width="3" height="2" fill="white" />
+          <rect x="1.35" width="0.3" height="2" fill="#cf142b" />
+          <rect y="0.85" width="3" height="0.3" fill="#cf142b" />
+        </svg>
+      </div>
+    </button></li>
+    <li><button class="btn" (click)="changeLanguage('sv')">
+      <div class="flex">
+        Svenska
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 10"
+             width="20">
+          <rect width="16" height="10" fill="#006aa7" />
+          <rect x="5" width="2" height="10" fill="#fecc00" />
+          <rect y="4" width="16" height="2" fill="#fecc00" />
+        </svg>
+      </div>
+    </button></li>
+  </ul>
+</div>

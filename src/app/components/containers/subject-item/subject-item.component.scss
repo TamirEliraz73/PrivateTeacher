@@ -1,0 +1,61 @@
+$primary-color: #16a085;
+$secondary-color: rgba(255, 255, 255, 0.1); //#2c3e50;
+$background-light: #2c3e50; //#ecf0f1;
+$text-color: #ecf0f1; //#34495e;
+$card-shadow: rgba(0, 0, 0, 0.2);
+
+:host {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 1rem;
+  //background-color: $background-light;
+  color: $text-color;
+}
+//   padding: 0 1.5rem 0 1.5rem;//1.5rem 1.5rem 0 0; // T R B L
+
+.card {
+  background-color: $primary-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px $card-shadow;
+  padding:  0.5rem 1.5rem 0.5rem 1.5rem; // שיניתי ל-padding אחיד
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // מרכז אנכית
+  align-items: center; // מרכז אופקית
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center; // מבטיח שהכיתוב לא יחרוג
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: row; // מיישר את האייקון ואת הכותרת באותו שורה
+    justify-content: center; // מרכז אופקית
+    align-items: center; // מרכז אנכית
+    gap: 0.5rem; // רווח בין האייקון לטקסט
+    width: 100%; // כדי למנוע בעיות יישור
+  }
+
+  .rtl {
+    direction: rtl;
+  }
+
+  .ltr {
+    direction: ltr;
+  }
+}

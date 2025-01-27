@@ -6,6 +6,7 @@ import {PricingPageComponent} from '../app/components/pages/pricing-page/pricing
 import {
   TermsAndConditionsPageComponent
 } from '../app/components/pages/terms-and-conditions-page/terms-and-conditions-page.component';
+import {SubjectsPageComponent} from '../app/components/pages/subjects-page/subjects-page.component';
 
 export type MyRoutes = Route & {
   title: string
@@ -16,6 +17,6 @@ export const routes: MyRoutes[] = [
   {path: '404', component: NotFoundPageComponent, title: 'דף לא נמצא'},
   {path: 'pricing', component: PricingPageComponent, title: 'מחירון'},
   {path: 'contact', component: NotFoundPageComponent, title: 'צרו קשר'}, // ContactPageComponent
-  {path: 'subjects', component:NotFoundPageComponent, title:'רשימת נושאים'},
+  {path: 'subjects', component:SubjectsPageComponent, title:'רשימת נושאים'},
   {path: 'terms', component: TermsAndConditionsPageComponent, title: 'תנאי שימוש'},
 ]

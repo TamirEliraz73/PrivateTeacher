@@ -1,0 +1,19 @@
+$primary-color: #16a085;
+$secondary-color: rgba(255, 255, 255, 0.1);//#2c3e50;
+$background-light: #2c3e50;//#ecf0f1;
+$text-color: #ecf0f1;//#34495e;
+$card-shadow: rgba(0, 0, 0, 0.2);
+
+h1, h2 {
+  color: $text-color;//$secondary-color;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+h1 {
+  font-size: 2.0rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}

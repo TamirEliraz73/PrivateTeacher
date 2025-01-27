@@ -1,9 +1,11 @@
 @use "tailwindcss";
+//@import "devicon/devicon.min.css";
+
 //@tailwind base;
 //@tailwind components;
 //@tailwind utilities;
 
 $background-color: #34495e;
-body{
+body {
   background-color: $background-color;
 }

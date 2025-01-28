@@ -37,6 +37,10 @@ $hover-color: rgba(22, 160, 133, 0.8);
       &:active {
         background: darken($secondary-color, 10%);
       }
+      &.active {
+        background-color: #007bff;  /* דוגמה לשינוי צבע */
+        color: white;
+      }
     }
 
     .language {

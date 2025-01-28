@@ -14,6 +14,13 @@ import { PricingPageComponent } from './components/pages/pricing-page/pricing-pa
 import { TermsAndConditionsPageComponent } from './components/pages/terms-and-conditions-page/terms-and-conditions-page.component';
 import { SubjectItemComponent } from './components/containers/subject-item/subject-item.component';
 import { SubjectsPageComponent } from './components/pages/subjects-page/subjects-page.component';
+import {NgOptimizedImage} from '@angular/common';
+import { EnglishSubjectPageComponent } from './components/pages/subjects-page/english-subject-page/english-subject-page.component';
+import { MathSubjectPageComponent } from './components/pages/subjects-page/math-subject-page/math-subject-page.component';
+import { PhysicsSubjectPageComponent } from './components/pages/subjects-page/pysics-subject-page/physics-subject-page.component';
+import { ComputerScienceSubjectPageComponent } from './components/pages/subjects-page/computer-sience-subject-page/computer-science-subject-page.component';
+import { ComputerScienceAcademicSubjectPageComponent } from './components/pages/subjects-page/computer-sience-academic-subject-page/computer-science-academic-subject-page.component';
+import { HistorySubjectPageComponent } from './components/pages/subjects-page/history-subject-page/history-subject-page.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +34,20 @@ import { SubjectsPageComponent } from './components/pages/subjects-page/subjects
     PricingPageComponent,
     TermsAndConditionsPageComponent,
     SubjectItemComponent,
-    SubjectsPageComponent
+    SubjectsPageComponent,
+    EnglishSubjectPageComponent,
+    MathSubjectPageComponent,
+    PhysicsSubjectPageComponent,
+    ComputerScienceSubjectPageComponent,
+    ComputerScienceAcademicSubjectPageComponent,
+    HistorySubjectPageComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    NgOptimizedImage
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

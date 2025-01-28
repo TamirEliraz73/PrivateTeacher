@@ -1,0 +1,8 @@
+.english{
+  direction: ltr;
+  text-align: left;
+  //margin-left: 10px;
+  &.h1{
+    direction: ltr;
+  }
+}

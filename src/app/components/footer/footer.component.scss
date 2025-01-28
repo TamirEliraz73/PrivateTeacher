@@ -26,6 +26,7 @@ $light-color: #ecf0f1;
     display: flex;
     justify-content: center;
     gap: 15px;
+    direction: ltr;
 
     li {
       display: inline-block;
